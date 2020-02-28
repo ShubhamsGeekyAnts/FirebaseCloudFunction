@@ -1,12 +1,6 @@
 const admin = require('firebase-admin');
 const {Firestore} = require('@google-cloud/firestore');
 
-const serviceAccount = require('../.keys/splitkar-v0-firebase-adminsdk-fwgm8-a2d46f34e5');
-
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-});
-
 const db = new  Firestore();
 
 class UsersModel {
